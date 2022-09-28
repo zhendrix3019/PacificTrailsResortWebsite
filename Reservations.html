@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Pacific Trails Resort :: Reservations </title>
+    <meta name = "description"
+          content = "Booking request and support page for the pacific trails resort">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="pacific.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk.html5.js">
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div id="wrapper">
+    <header><h1> Pacific Trails Resort </h1></header>
+    <nav>
+        <div id="nav">
+            <ul>
+                <li><a href="PacificIndex.html"> Home </a></li>
+                <li><a href="yurts.html">Yurts </a></li>
+                <li><a href="activities.html"> Activities </a></li>
+                <li><a href="reservations.html"> Reservations </a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h2>Reservations at Pacific Trails</h2>
+
+        <h3>Contact Us Today!</h3>
+
+        <p>
+            Required fields are marked by an *
+        </p>
+
+        <form method="post" action="http://webdevbasics.net/scripts/pacific.php">
+            <label for="myFName">*First Name: </label>
+            <input type="text" name="myFName" id="myFName" onBlur = "fnameToCaps()" required="required" placeholder="Your First Name">
+            <label for="myLName">*Last Name:</label>
+            <input type="text" name="myLName" id="myLName" onBlur = "lnameToCaps()" required="required" placeholder="Your Last Name">
+            <label for="myEmail">*E-mail:</label>
+            <input type="email" name="myEmail" id="myEmail" required="required" size="35"
+                   placeholder="you@yourdomain.com">
+            <label for="myPhone">Phone Number:</label>
+            <input type="tel" name="myPhone" id="myPhone" maxlength="12" placeholder="(555)555-5555">
+            <label for="arrivalDate">Arrival Date</label>
+            <input type="date" name="arrivalDate" id="arrivalDate">
+            <label for="nights">Nights:</label>
+            <input type="number" name="nights" id="nights" min="1" max="14">
+            <label for="myComments">*Comments</label>
+            <textarea name="myComments" id="myComments" rows="2" cols="30" required="required"
+                      placeholder="Leave Us Any Comments Here"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="contact">
+            <span class="resort">Pacific Trails Resort</span><br>
+            12010 Pacific Trails Road<br>
+            Zephyr, CA 95555<br><br>
+            <a id="mobile" href="tel:888-555-5555">888-555-5555</a>
+            <span id="desktop"> 888-555-5555</span>
+        </div>
+        <br><br>
+    </main>
+    <footer>
+        Copyright&copy 2022 Pacific Trails Resort<br>
+        <a href="mailto:zhendrix@my.wctc.edu">ZackHendrix</a>
+        <a href="/index.html"> Back to Main Page</a>
+    </footer>
+</div>
+<script>
+    function fnameToCaps(){
+        var x = document.getElementById("myFName");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+<script>
+    function lnameToCaps(){
+        var x = document.getElementById("myLName");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+</body>
+</html>
